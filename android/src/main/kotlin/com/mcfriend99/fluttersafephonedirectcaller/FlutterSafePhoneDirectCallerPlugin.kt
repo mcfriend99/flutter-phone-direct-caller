@@ -1,4 +1,4 @@
-package com.yanisalfian.flutterphonedirectcaller
+package com.mcfriend99.fluttersafephonedirectcaller
 
 import android.Manifest
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -20,13 +20,13 @@ import android.content.Context
 import android.app.Activity
 import android.util.Log
 
-/** FlutterPhoneDirectCallerPlugin  */
-class FlutterPhoneDirectCallerPlugin : FlutterPlugin, ActivityAware {
-    private var handler: FlutterPhoneDirectCallerHandler? = null
+/** FlutterSafePhoneDirectCallerPlugin  */
+class FlutterSafePhoneDirectCallerPlugin : FlutterPlugin, ActivityAware {
+    private var handler: FlutterSafePhoneDirectCallerHandler? = null
     override fun onAttachedToEngine(binding: FlutterPluginBinding) {
-        handler = FlutterPhoneDirectCallerHandler()
+        handler = FlutterSafePhoneDirectCallerHandler()
         val channel = MethodChannel(
-            binding.binaryMessenger, "flutter_phone_direct_caller"
+            binding.binaryMessenger, "flutter_safe_phone_direct_caller"
         )
         channel.setMethodCallHandler(handler)
     }
@@ -41,7 +41,7 @@ class FlutterPhoneDirectCallerPlugin : FlutterPlugin, ActivityAware {
     override fun onDetachedFromActivity() {}
 }
 
-internal class FlutterPhoneDirectCallerHandler :
+internal class FlutterSafePhoneDirectCallerHandler :
     MethodCallHandler, RequestPermissionsResultListener {
     private var activityPluginBinding: ActivityPluginBinding? = null
     private var number: String? = null
