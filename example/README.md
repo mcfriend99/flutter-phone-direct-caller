@@ -1,6 +1,6 @@
 # phone_direct_caller
 
-Demonstrates how to use the flutter_phone_direct_caller plugin.
+Demonstrates how to use the flutter_safe_phone_direct_caller plugin.
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-group 'com.yanisalfian.flutterphonedirectcaller'
+group 'com.mcfriend99.fluttersafephonedirectcaller'
 version '1.0-SNAPSHOT'
 
 buildscript {

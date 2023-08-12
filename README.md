@@ -1,12 +1,14 @@
-# flutter_phone_direct_caller
+# flutter_safe_phone_direct_caller
 
 A simple plugin to call number directly from app, without going to phone dialer. Permission request is handled by plugin.
+
+A fork of [yanisalfian/flutter-phone-direct-caller](https://github.com/yanisalfian/flutter-phone-direct-caller).
 
 ## Usage
 
 Add dependency to pubspec.yaml file
 ```
-flutter_phone_direct_caller: ^2.1.1
+flutter_safe_phone_direct_caller: ^0.1.0
 ```
 
 ### Android
@@ -25,7 +27,7 @@ Add this to your ```info.plist``` under ```dict```
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:flutter_safe_phone_direct_caller/flutter_safe_phone_direct_caller.dart';
 
 void main() {
   runApp(Scaffold(
@@ -40,7 +42,7 @@ void main() {
 
 _callNumber() async{
   const number = '08592119XXXX'; //set the number here
-  bool res = await FlutterPhoneDirectCaller.callNumber(number);
+  bool res = await FlutterSafePhoneDirectCaller.callNumber(number);
 }
 ```
 

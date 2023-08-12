@@ -1,11 +1,11 @@
-#import "FlutterPhoneDirectCallerPlugin.h"
+#import "FlutterSafePhoneDirectCallerPlugin.h"
 
-@implementation FlutterPhoneDirectCallerPlugin
+@implementation FlutterSafePhoneDirectCallerPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"flutter_phone_direct_caller"
+      methodChannelWithName:@"flutter_safe_phone_direct_caller"
             binaryMessenger:[registrar messenger]];
-  FlutterPhoneDirectCallerPlugin* instance = [[FlutterPhoneDirectCallerPlugin alloc] init];
+  FlutterSafePhoneDirectCallerPlugin* instance = [[FlutterSafePhoneDirectCallerPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 
